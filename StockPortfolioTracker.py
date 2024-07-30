@@ -13,7 +13,7 @@ class Portfolio:
             self.holdings[symbol]['shares'] += shares
             self.update_cost_basis(symbol, price_per_share)
         else:
-             self.holdings[symbol] = {'shares' : shares, 'cost_basis' : price_per_share)
+             self.holdings[symbol] = {'shares' : shares, 'cost_basis' : price_per_share}
                                       
       def remove_stock(self, symbol, shares):
           if symbol in self.holdings:
@@ -47,11 +47,11 @@ def get_stock_quote(self, symbol):
         return 0.0
 
 def print_portfolio(self):
-    print("\n=== Cureent Portfolio ===")
+    print("\n=== Current Portfolio ===")
     for symbol, data in self.holdings.items():
         price = self.get_stock_quote(symbol)
         current_value = price *data['shares']
-        print(f"{symbol}: Shares={data['shares']}, Cost Basis=${data['cost_basis']:.2f}, Cureent price=${price:.2f}, Cureent Vlalue=${current_value:.2f}")
+        print(f"{symbol}: Shares={data['shares']}, Cost Basis=${data['cost_basis']:.2f}, Cureent price=${price:.2f}, Cureent Value=${current_value:.2f}")
     total_value = self.portfolio_value()
     print(f"Total Portfolio Value: ${total_value:.2f}")
 
@@ -88,7 +88,7 @@ def main():
            print("Exiting.")
            break
 
-         else:
+        else:
               print("invalid choice. Please enter a number between 1 and 4.")
              
 if __name__ =="__main__":
