@@ -47,6 +47,55 @@ def get_stock_quote(self, symbol):
         return 0.0
 
 def print_portfolio(self):
-    print
+    print(\n=== Cureent Portfolio ===")
+    for symbol, data in self.holdings.items():
+        price = self.get_stock_quote(symbol)
+        current_value = price *dara['shares;]
+        print(f"{symbol}: Shares={data['shares']}, Cost Basis=${data['cost_bais']:.2f}, Cureent price=${price:.2f}, Cureent Vlalue=${current_value:.2f}")
+    total_value = self.portfolio_value()
+    print(f"Total Portfolio Value: ${total_value:.2f}")
+
+
+def main():
+    portfolio = Portfolio()
+
+    while True:
+        print("\nMenu:")
+        print("1. Add stock")
+        print("2. Remove stock")
+        print("3. View portfolio")
+        print("4. Exit")
         
-      
+        choice = input("Enter your choice:")
+        
+        if choice == '1':
+            symbol    = input("Enter stocl symbol:").upper()
+            shares = it(input("Enter number of shares: "))
+            price = float9input("Enter price per share: "))
+            portfolio.add_stock(symbol, shares, price)
+            print(f"Added {shares} share of {symbol} at ${price:.2f} each.")
+
+        elif choice == '2':
+            symbol = input("Enter stock symbol: ").upper()
+            shares = int(input("Enter number of shares to remove: "))
+            portfolio.remove_stock(symbol, shares)
+            print(f"Removed {shares} shares of {symbol}.")
+
+        elif choice == '3':
+             portfolio.print_portfolio()
+
+        elif choice == '4'
+           print("Exiting.")
+           break
+
+         else:
+              print("invalid choice.Please enter a number between 1 and 4.")
+             
+if __name__ =="__main__":
+    main()
+
+                
+        
+           
+
+        
