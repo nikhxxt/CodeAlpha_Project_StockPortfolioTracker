@@ -10,10 +10,10 @@ class Portfolio:
     
     def add_stock(self, symbol, shares, price_per_share):
         if symbol in self.holdings:
-            self.holdings[symbol] ['shares'] += shares
+            self.holdings[symbol]['shares'] += shares
             self.update_cost_basis(symbol, price_per_share)
-        else;
-             self.holdings[symbol] = {'shares ; shares, 'cost_basis' : price_per_share)
+        else:
+             self.holdings[symbol] = {'shares : shares, 'cost_basis' : price_per_share)
                                       
       def remove_stock(self, symbol, shares):
           if symbol in self.holdings:
@@ -50,8 +50,8 @@ def print_portfolio(self):
     print(\n=== Cureent Portfolio ===")
     for symbol, data in self.holdings.items():
         price = self.get_stock_quote(symbol)
-        current_value = price *dara['shares;]
-        print(f"{symbol}: Shares={data['shares']}, Cost Basis=${data['cost_bais']:.2f}, Cureent price=${price:.2f}, Cureent Vlalue=${current_value:.2f}")
+        current_value = price *data['shares;]
+        print(f"{symbol}: Shares={data['shares']}, Cost Basis=${data['cost_basis']:.2f}, Cureent price=${price:.2f}, Cureent Vlalue=${current_value:.2f}")
     total_value = self.portfolio_value()
     print(f"Total Portfolio Value: ${total_value:.2f}")
 
@@ -69,8 +69,8 @@ def main():
         choice = input("Enter your choice:")
         
         if choice == '1':
-            symbol    = input("Enter stocl symbol:").upper()
-            shares = it(input("Enter number of shares: "))
+            symbol    = input("Enter stock symbol:").upper()
+            shares = int(input("Enter number of shares: "))
             price = float9input("Enter price per share: "))
             portfolio.add_stock(symbol, shares, price)
             print(f"Added {shares} share of {symbol} at ${price:.2f} each.")
