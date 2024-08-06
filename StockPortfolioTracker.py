@@ -47,13 +47,13 @@ class Portfolio:
             return 0.0
 
     def print_portfolio(self):
-    print("\n=== Current Portfolio ===")
-    for symbol, data in self.holdings.items():
-        price = self.get_stock_quote(symbol)
-        current_value = price *data['shares']
-        print(f"{symbol}: Shares={data['shares']}, Cost Basis=${data['cost_basis']:.2f}, Cureent price=${price:.2f}, Cureent Value=${current_value:.2f}")
-    total_value = self.portfolio_value()
-    print(f"Total Portfolio Value: ${total_value:.2f}")
+        print("\n=== Current Portfolio ===")
+        for symbol, data in self.holdings.items():
+            price = self.get_stock_quote(symbol)
+            current_value = price *data['shares']
+            print(f"{symbol}: Shares={data['shares']}, Cost Basis=${data['cost_basis']:.2f}, Cureent price=${price:.2f}, Cureent Value=${current_value:.2f}")
+        total_value = self.portfolio_value()
+        print(f"Total Portfolio Value: ${total_value:.2f}")
 
 
 def main():
